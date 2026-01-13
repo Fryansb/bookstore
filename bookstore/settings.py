@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Django REST Framework - EBAC Exercise Module 4
     'rest_framework',
+    # Apps
+    'order',
+    'product',
 ]
 
 MIDDLEWARE = [

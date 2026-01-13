@@ -1,0 +1,11 @@
+from rest_framework import serializers
+from product.models import Product
+from .category_serializer import CategorySerializer
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    category = CategorySerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Product
+        fields = '__all__'
