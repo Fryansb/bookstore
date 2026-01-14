@@ -1,13 +1,21 @@
 import json
 from decimal import Decimal
+from django.contrib.auth import get_user_model
 from rest_framework.test import APITestCase
 from rest_framework.reverse import reverse
+from rest_framework.authtoken.models import Token
 from product.models import Product
 from product.factories import ProductFactory, CategoryFactory
 
 
 class ProductViewSetTest(APITestCase):
     def setUp(self):
+        self.user = get_user_model().objects.create_user(
+            username='testuser',
+            password='testpass123'
+        )
+        self.token = Token.objects.create(user=self.user)
+        
         self.category = CategoryFactory(title="Electronics")
         self.product = ProductFactory(
             title="Laptop",
@@ -17,6 +25,9 @@ class ProductViewSetTest(APITestCase):
 
     def test_get_all_products(self):
         """Test listing all products"""
+        token = Token.objects.get(user__username=self.user.username)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+        
         response = self.client.get('/bookstore/v1/product/product/')
         self.assertEqual(response.status_code, 200)
         
@@ -29,6 +40,9 @@ class ProductViewSetTest(APITestCase):
 
     def test_create_product(self):
         """Test creating a new product"""
+        token = Token.objects.get(user__username=self.user.username)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+        
         new_category = CategoryFactory(title="Books")
         
         payload = {
