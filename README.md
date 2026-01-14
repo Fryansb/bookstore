@@ -19,9 +19,37 @@ API REST para gerenciamento de uma livraria (bookstore), construída com Django 
 
 ### Pré-requisitos
 - Python 3.12 ou superior
-- Poetry instalado globalmente
+- pip (gerenciador de pacotes Python)
 
 ### Setup do projeto
+
+#### Opção 1: Usando pip e virtualenv (Recomendado)
+
+```bash
+# Clone o repositório
+git clone https://github.com/Fryansb/bookstore.git
+cd bookstore
+
+# Crie um ambiente virtual
+python -m venv venv
+
+# Ative o ambiente virtual
+# No Windows:
+venv\Scripts\activate
+# No Linux/Mac:
+source venv/bin/activate
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Execute as migrações
+python manage.py migrate
+
+# Inicie o servidor de desenvolvimento
+python manage.py runserver
+```
+
+#### Opção 2: Usando Poetry
 
 ```bash
 # Clone o repositório
@@ -37,6 +65,8 @@ poetry run python manage.py migrate
 # Inicie o servidor de desenvolvimento
 poetry run python manage.py runserver
 ```
+
+> ⚠️ **Importante**: Nunca commite a pasta `env/`, `venv/` ou `.venv/` no repositório. Ela já está incluída no `.gitignore`.
 
 ## 🧪 Executar Testes
 
