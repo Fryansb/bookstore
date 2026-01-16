@@ -1,0 +1,18 @@
+# Bookstore Project Requirements
+# Generated for EBAC Backend Python Course
+
+# Django Framework
+django>=6.0.1,<7.0.0
+
+# Django REST Framework
+djangorestframework>=3.16.1,<4.0.0
+
+# Django Extensions
+django-extensions>=4.1,<5.0
+
+# Django Debug Toolbar (for development)
+django-debug-toolbar>=4.0.0,<5.0.0
+
+# Testing
+pytest>=9.0.2,<10.0.0
+factory-boy>=3.3.3,<4.0.0

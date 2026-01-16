@@ -29,3 +29,11 @@ db.sqlite3
 *.mo
 media/
 staticfiles/
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env
+*.env
