@@ -68,8 +68,10 @@ pip install -r requirements.txt
 
 **Se der erro em algum pacote**, instale manualmente:
 ```bash
-pip install Django==6.0.1 djangorestframework==3.16.1 django-extensions gunicorn whitenoise
+pip install Django==5.1.15 djangorestframework==3.16.1 django-extensions==4.1 gunicorn==21.2.0 whitenoise==6.6.0 python-decouple==3.8 dj-database-url==2.1.0
 ```
+
+⚠️ **Importante:** Django 6.0+ requer Python 3.12. PythonAnywhere free tier usa Python 3.10, então usamos Django 5.1.15.
 
 ---
 
