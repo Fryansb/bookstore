@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     # Django Extensions
     'django_extensions',
     # Apps
-    'order',
-    'product',
+    'api',
 ]
 
 MIDDLEWARE = [
