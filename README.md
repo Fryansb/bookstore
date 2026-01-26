@@ -4,24 +4,54 @@ Projeto Django REST Framework desenvolvido durante o curso Backend Python da EBA
 
 ## 📚 Descrição
 
-API REST para gerenciamento de uma livraria (bookstore), construída com Django e Django REST Framework.
+API REST completa para gerenciamento de uma livraria (bookstore) com sistema de produtos, categorias e pedidos.
+
+## 🔗 Links Importantes
+
+- **Repositório GitHub**: https://github.com/Fryansb/bookstore
+- **PR CI/CD**: https://github.com/Fryansb/bookstore/pull/9
+- **GitHub Actions**: https://github.com/Fryansb/bookstore/actions
+- **Painel Admin**: http://localhost:8000/admin/
+- **API Categorias**: http://localhost:8000/bookstore/v1/product/category/
+- **API Produtos**: http://localhost:8000/bookstore/v1/product/product/
+- **API Pedidos**: http://localhost:8000/bookstore/v1/order/
 
 ## 🚀 Tecnologias
 
 - Python 3.12+
 - Django 6.0.1
 - Django REST Framework 3.16.1
+- PostgreSQL 14 (Docker)
+- Docker & Docker Compose
 - Poetry (gerenciador de dependências)
-- pytest (testes)
-- factory-boy (fixtures para testes)
+- pytest + factory-boy (testes)
+- GitHub Actions (CI/CD)
 
 ## 📦 Instalação
 
-### Pré-requisitos
-- Python 3.12 ou superior
-- Poetry instalado globalmente
+### Opção 1: Com Docker (Recomendado)
 
-### Setup do projeto
+```bash
+# Clone o repositório
+git clone https://github.com/Fryansb/bookstore.git
+cd bookstore
+
+# Configure as variáveis de ambiente
+cp env.dev .env
+
+# Inicie os containers
+docker-compose up -d
+
+# Execute as migrações
+docker-compose exec web python manage.py migrate
+
+# Crie um superusuário
+docker-compose exec web python manage.py createsuperuser
+
+# Acesse: http://localhost:8000/admin/
+```
+
+### Opção 2: Desenvolvimento Local
 
 ```bash
 # Clone o repositório
@@ -37,6 +67,10 @@ poetry run python manage.py migrate
 # Inicie o servidor de desenvolvimento
 poetry run python manage.py runserver
 ```
+
+**Credenciais de acesso:**
+- **Usuário**: admin
+- **Senha**: (fornecida pelo instrutor)
 
 ## 🧪 Executar Testes
 
