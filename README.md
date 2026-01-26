@@ -20,13 +20,13 @@ API REST completa para gerenciamento de uma livraria (bookstore) com sistema de 
 
 ## 🔗 Links Importantes
 
-- **Repositório GitHub**: https://github.com/Fryansb/bookstore
-- **PR CI/CD**: https://github.com/Fryansb/bookstore/pull/9
-- **GitHub Actions**: https://github.com/Fryansb/bookstore/actions
-- **Painel Admin**: http://localhost:8000/admin/
-- **API Categorias**: http://localhost:8000/bookstore/v1/product/category/
-- **API Produtos**: http://localhost:8000/bookstore/v1/product/product/
-- **API Pedidos**: http://localhost:8000/bookstore/v1/order/
+- [Repositório GitHub](https://github.com/Fryansb/bookstore)
+- [PR CI/CD #9](https://github.com/Fryansb/bookstore/pull/9)
+- [GitHub Actions](https://github.com/Fryansb/bookstore/actions)
+- [Painel Admin (Deploy)](https://ryansb.pythonanywhere.com/admin/)
+- [API Categorias (Deploy)](https://ryansb.pythonanywhere.com/bookstore/v1/product/category/)
+- [API Produtos (Deploy)](https://ryansb.pythonanywhere.com/bookstore/v1/product/product/)
+- [API Pedidos (Deploy)](https://ryansb.pythonanywhere.com/bookstore/v1/order/)
 
 ## 🚀 Tecnologias
 
