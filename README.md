@@ -1,3 +1,15 @@
+# 🚀 Deploy Online
+
+- 🔗 **Acesse o projeto:** [https://ryansb.pythonanywhere.com](https://ryansb.pythonanywhere.com)
+- 🔑 **Admin:** [https://ryansb.pythonanywhere.com/admin/](https://ryansb.pythonanywhere.com/admin/)
+	- Usuário: admin
+	- Senha: admin123
+
+### Endpoints principais:
+- [API Products](https://ryansb.pythonanywhere.com/bookstore/v1/product/product/)
+- [API Category](https://ryansb.pythonanywhere.com/bookstore/v1/product/category/)
+- [API Order](https://ryansb.pythonanywhere.com/bookstore/v1/order/)
+
 # Bookstore API
 
 Projeto Django REST Framework desenvolvido durante o curso Backend Python da EBAC.
